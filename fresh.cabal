@@ -4,7 +4,7 @@ Synopsis:           Introduce fresh variables into Haskell source code
 Description:        This library provides functions for converting fresh
                     variables of the form @Ident \"\@foo\"@ into concrete
                     variables that are globally unique across an AST.
-Homepage:           https://code.google.com/p/fresh-hs/
+Homepage:           https://github.com/davidlazar/fresh
 License:            MIT
 License-file:       LICENSE
 Author:             David Lazar
@@ -14,8 +14,8 @@ Build-type:         Simple
 Cabal-version:      >=1.6
 
 source-repository head
-  Type:             mercurial
-  Location:         https://fresh-hs.googlecode.com/hg/
+  Type:             git
+  Location:         https://github.com/davidlazar/fresh
 
 Library
   Exposed-modules:
