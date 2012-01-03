@@ -1,5 +1,5 @@
 Name:               fresh
-Version:            0.1.0
+Version:            0.1.1
 Synopsis:           Introduce fresh variables into Haskell source code
 Description:        This library provides functions for converting fresh
                     variables of the form @Ident \"\@foo\"@ into concrete
