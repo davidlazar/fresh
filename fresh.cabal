@@ -8,7 +8,7 @@ Homepage:           https://code.google.com/p/fresh-hs/
 License:            MIT
 License-file:       LICENSE
 Author:             David Lazar
-Maintainer:         lazar6@illinois.edu
+Maintainer:         David Lazar <lazar6@illinois.edu>
 Category:           Language
 Build-type:         Simple
 Cabal-version:      >=1.6
