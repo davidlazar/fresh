@@ -20,6 +20,8 @@ source-repository head
   Location:         https://github.com/davidlazar/fresh
 
 Library
+  Hs-source-dirs:   src
+
   Exposed-modules:
     Language.Haskell.Exts.Fresh
 
