@@ -1,7 +1,7 @@
 -----------------------------------------------------------------------------
 -- |
 -- Module      :  Language.Haskell.Exts.Fresh
--- Copyright   :  (c) David Lazar, 2011
+-- Copyright   :  (c) David Lazar, 2012
 -- License     :  MIT
 --
 -- Maintainer  :  lazar6@illinois.edu
