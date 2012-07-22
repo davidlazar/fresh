@@ -20,6 +20,8 @@ source-repository head
   Location:         https://github.com/davidlazar/fresh
 
 Library
+  ghc-options:      -Wall
+
   Hs-source-dirs:   src
 
   Exposed-modules:
