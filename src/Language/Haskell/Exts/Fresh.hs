@@ -50,7 +50,8 @@ concretize = fst . concretize'
 -- concretization.
 concretize' :: (Data a) => a -> (a, ConflictTable)
 concretize' a = (everywhere (mkT (concretizeVar cft)) a, cft)
-    where cft = genConflictTable a
+  where
+    cft = genConflictTable a
 
 -- | Turn a fresh variable into a concrete variable by looking up the
 -- variable's name in the given conflict table; if not present in the
@@ -77,22 +78,25 @@ genConflictTable
 mkConflictTable :: Set String -> Set String -> ConflictTable
 mkConflictTable fresh concrete
     = Map.fromList . snd $ mapAccumR uniquifyAcc allvars conflicting
-    where allvars     = Set.union fresh concrete
-          conflicting = Set.toList (Set.intersection fresh concrete)
+  where
+    allvars = Set.union fresh concrete
+    conflicting = Set.toList (Set.intersection fresh concrete)
 
 -- | Accumulator function to uniquify a list of Strings (updates the Set of
 -- Strings as Strings are uniquified).
 uniquifyAcc :: Set String -> String -> (Set String, (String, String))
 uniquifyAcc set prefix = (Set.insert uniq set, (prefix, uniq))
-    where uniq = uniquify set prefix
+  where
+    uniq = uniquify set prefix
 
 -- | @uniquify set prefix@ returns a String with the given prefix that is not
 -- contained in @set@.
 uniquify :: Set String -> String -> String
 uniquify set prefix = find' unique choices
-    where find' p = head . filter p
-          unique x = Set.notMember x set
-          choices  = map (prefix ++) ("" : letters)
+  where
+    find' p = head . filter p
+    unique x = Set.notMember x set
+    choices = map (prefix ++) ("" : letters)
 
 -- | Infinite stream of letters to be used as suffixes:
 -- ["a".."z","aa","ab"..]
