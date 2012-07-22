@@ -89,8 +89,8 @@ uniquifyAcc set prefix = (Set.insert uniq set, (prefix, uniq))
 -- | @uniquify set prefix@ returns a String with the given prefix that is not
 -- contained in @set@.
 uniquify :: Set String -> String -> String
-uniquify set prefix = first unique choices
-    where first  p = head . filter p
+uniquify set prefix = find' unique choices
+    where find' p = head . filter p
           unique x = Set.notMember x set
           choices  = map (prefix ++) ("" : letters)
 
